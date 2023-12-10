@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { roboto, sans } from '@/lib/fonts'
+import StyledComponentsRegistry from '../lib/AntdRegistry'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="fa" dir='rtl'>
       <body className={sans.variable}>
-        {children}
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   )
